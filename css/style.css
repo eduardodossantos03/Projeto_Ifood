@@ -1,0 +1,115 @@
+/* Reset de margem e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adiciona box-sizing */
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#ea1d2c;
+}
+
+/* Estilo da navegação */
+.navbar {
+    margin-bottom: 3rem;
+}
+
+/* Estilo do título */
+.title {
+    font-size: 1.25rem; /* Corrigido: vírgula para ponto */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background-color:#ea1d2c;
+    border-radius: 4px;
+}
+
+/* Layout do painel */
+#wrapper {
+    display: flex;
+}
+
+#sidebar {
+    width: 250px;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#page-content-wrapper {
+    margin-left: 250px;
+    width: 100%;
+}
+
+.sidebar-heading {
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-bottom: solid;
+}
+
+/* Estilo do container */
+.container-fluid {
+    color: aliceblue;
+    background: color #ea1d2c;
+    text-align: center; /* Centraliza texto */
+    padding: 5px;
+    width: 80%;
+}
+
+.container-fluid h2 {
+    font-size: 3rem;
+    margin: 1rem 0; /* Adiciona margem */
+
+}
+
+.container-fluid p {
+    font-size: 2rem;
+}
+
+/* Estilo da tabela */
+.table {
+    font-size: 1rem; /* Ajusta para uma melhor legibilidade */
+    margin: 20px 0; /* Adiciona margem vertical */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%; /* Sidebar ocupa toda a largura em telas menores */
+        position: relative; /* Alterado para relative em telas pequenas */
+        min-height: auto; /* Remove altura mínima */
+    }
+
+    #page-content-wrapper {
+        margin-left: 0; /* Remove margem em telas pequenas */
+    }
+
+    .container-fluid h2, 
+    .container-fluid p {
+        font-size: 1.5rem; /* Ajusta tamanhos de fonte para responsividade */
+    }
+    
+    .table {
+        font-size: 0.9rem; /* Tabela menor em telas pequenas */
+    }
+}
